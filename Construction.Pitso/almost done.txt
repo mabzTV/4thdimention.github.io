@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form for Construction Summit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background">
+    <div class="content-wrapper">
+      <!-- Introduction Section -->
+      <div class="intro">
+        <h2>Welcome to the Construction Summit</h2>
+        <p>The annual Construction Summit brings together the industry's most influential professionals. This summit offers a unique opportunity to network, share innovations, and discuss the future of construction.</p>
+        <ul>
+          <li><strong>Networking Opportunities:</strong> Meet industry leaders and innovators.</li>
+          <li><strong>Workshops and Panels:</strong> Gain insights from experts in the field.</li>
+          <li><strong>Exhibit Halls:</strong> Explore the latest construction technologies and services.</li>
+          <li><strong>Keynote Speakers:</strong> Hear from top professionals and thought leaders.</li>
+        </ul>
+      </div>
+
+      <!-- Registration Form Section -->
+      <div class="card">
+        <h2>Register for the Summit</h2>
+        <form action="#" method="post">
+          <!-- First name and Last name fields -->
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+
+          <!-- Company and Role fields -->
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" id="role" name="role" required>
+          </div>
+
+          <!-- Phone Number field -->
+          <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
+          </div>
+
+          <!-- Gender radio buttons -->
+          <div class="form-group">
+            <label>Gender</label>
+            <div>
+              <input type="radio" id="male" name="gender" value="Male" required>
+              <label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="Female">
+              <label for="female">Female</label>
+            </div>
+          </div>
+
+          <!-- Reason for attendance radio buttons -->
+          <div class="form-group">
+            <label>Reason for Attendance</label>
+            <div>
+              <input type="radio" id="audience" name="attendance" value="Audience" required>
+              <label for="audience">Audience</label>
+            </div>
+            <div>
+              <input type="radio" id="exhibitor" name="attendance" value="Exhibitor">
+              <label for="exhibitor">Exhibitor</label>
+            </div>
+          </div>
+
+          <!-- Package selection dropdown -->
+          <div class="form-group">
+            <label for="package">Select Package</label>
+            <select id="package" name="package" required>
+              <option value="Bronze">Bronze</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+              <option value="Platinum">Platinum</option>
+              <option value="None">None</option>
+            </select>
+          </div>
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Packages Section with Image Background -->
+  <div class="packages">
+
+    <div class="outlined-text">
+        <h2>Available Packages</h2>
+        </div>
+
+        
+
+    <div class="package-gallery">
+      <div class="package">
+        <img src="bronze.jpeg" alt="Bronze Package" class="package-image">
+        <p>Bronze</p>
+      </div>
+      <div class="package">
+        <img src="silver.jpeg" alt="Silver Package" class="package-image">
+        <p>Silver</p>
+      </div>
+      <div class="package">
+        <img src="gold.jpeg" alt="Gold Package" class="package-image">
+        <p>Gold</p>
+      </div>
+      <div class="package">
+        <img src="platinum.jpeg" alt="Platinum Package" class="package-image">
+        <p>Platinum</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+------------------------------------------------------------------------------------------------------------
+*css*
+---------------------
+
+/* Apply full height to the page and remove default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Set single background image */
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url('bg1.jpg');
+    background-size: cover; /* Make the background image cover the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps background fixed during scroll */
+    background-color: rgba(0, 0, 0, 0.5); /* Slight dark overlay for better readability */
+  }
+  
+  /* Flex container for content */
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  /* Introduction Section */
+  .intro {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .intro h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .intro ul {
+    list-style-type: none;
+  }
+  
+  .intro li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the card (registration form) */
+  .card {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+  }
+  
+  /* Packages Section with Image Background */
+  .packages {
+    background-image: url('bg3.jpg'); /* Set a background image for the section */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    text-align: center;
+    color: rgb(203, 118, 22); /* Text color for contrast */
+  }
+  
+  .packages h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+/* Gallery layout for the package images */
+.package-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase min-width to 300px */
+    gap: 30px; /* Increase gap between images */
+    padding: 20px;
+  }
+  
+  /* Package styles */
+  .package {
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency to highlight images */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .package:hover {
+    transform: scale(2.2); /* Slight zoom effect on hover */
+  }
+  
+  .package img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image takes up full width of the container */
+    border-radius: 10px;
+  }
+  
+  /* Increase font size for the package name */
+  .package p {
+    font-size: 20px; /* Increase the size of the package name */
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1768px) {
+    .package-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    }
+  }
+  
+  /* Modal (Image Viewer) Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  #modalCaption {
+    text-align: center;
+    color: #ce8730;
+    padding: 10px 0;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #ca5e10;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #d4820e;
+    text-decoration: none;
+    cursor: pointer; 
+  }
+
+  .outlined-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(66, 44, 130); /* White text */
+    text-shadow: 
+      2px 2px 0px orange,  /* Shadow to the right and bottom */
+      -2px -2px 0px orange, /* Shadow to the left and top */
+      2px -2px 0px orange,  /* Shadow to the left and top */
+      -2px 2px 0px orange;  /* Shadow to the right and bottom */
+  }
+
+
+---------------------------------------------------------------------------------------------------
+finished css
+----------------------------------------
+/* Apply full height to the page and remove default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Set single background image */
+  .background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url('bg1.jpg');
+    background-size: cover; /* Make the background image cover the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps background fixed during scroll */
+    background-color: rgba(0, 0, 0, 0.5); /* Slight dark overlay for better readability */
+  }
+  
+  /* Flex container for content */
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  /* Introduction Section */
+  .intro {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .intro h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .intro ul {
+    list-style-type: none;
+  }
+  
+  .intro li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the card (registration form) */
+  .card {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+  }
+  
+  /* New Image Section */
+  .image-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+  .image-section-img {
+    width: 80%; /* Set the image width to 80% of the container */
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Packages Section */
+  .packages {
+    background-image: url('bg4.jpg'); /* Set a background image for the section */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    text-align: center;
+    color: rgb(7, 6, 5); /* Text color for contrast */
+  }
+  
+  .packages h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Display package options in pairs in a grid layout */
+  .package-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for packages */
+    gap: 30px; /* Space between the packages */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style for each package */
+  .package {
+    background-color: rgba(255, 255, 255, 0.7); /* Slight transparency to highlight images */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .package:hover {
+    transform: scale(1.55); /* Slight zoom effect on hover */
+  }
+  
+  .package img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .package p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .package-options {
+      grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+  }
+  
+  /* Modal (Image Viewer) Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  #modalCaption {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+-----------------------------------------------------
+finished html
+--------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form for Construction Summit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background">
+    <div class="content-wrapper">
+      <!-- Introduction Section -->
+      <div class="intro">
+        <h2>Welcome to the Construction Summit/Pitso</h2>
+        <p>The annual Construction Summit brings together the industry's most influential professionals. 
+            This summit offers a unique opportunity to network, share innovations, and discuss the future of construction.</p>
+        <ul>
+          <li><strong>Networking Opportunities:</strong> Meet industry leaders and innovators.</li>
+          <li><strong>Workshops and Panels:</strong> Gain insights from experts in the field.</li>
+          <li><strong>Exhibit Halls:</strong> Explore the latest construction technologies and services.</li>
+          <li><strong>Keynote Speakers:</strong> Hear from top professionals and thought leaders.</li>
+        </ul>
+      </div>
+
+      <!-- Registration Form Section -->
+      <div class="card">
+        <h2>Register for the Summit</h2>
+        <form action="#" method="post">
+          <!-- First name and Last name fields -->
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+
+          <!-- Company and Role fields -->
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" required>
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" id="role" name="role" required>
+          </div>
+
+          <!-- Phone Number field -->
+          <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
+          </div>
+
+          <!-- Gender radio buttons -->
+          <div class="form-group">
+            <label>Gender</label>
+            <div>
+              <input type="radio" id="male" name="gender" value="Male" required>
+              <label for="male">^Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="Female">
+              <label for="female">^Female</label>
+            </div>
+          </div>
+
+          <!-- Reason for attendance radio buttons -->
+          <div class="form-group">
+            <label>Reason for Attendance</label>
+            <div>
+              <input type="radio" id="audience" name="attendance" value="Audience" required>
+              <label for="audience">^Audience</label>
+            </div>
+            <div>
+              <input type="radio" id="exhibitor" name="attendance" value="Exhibitor">
+              <label for="exhibitor">^Exhibitor</label>
+            </div>
+          </div>
+
+          <!-- Package selection dropdown -->
+          <div class="form-group">
+            <label for="package">Select Package</label>
+            <select id="package" name="package" required>
+              <option value="Bronze">Bronze</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+              <option value="Platinum">Platinum</option>
+              <option value="None">None</option>
+            </select>
+          </div>
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Image Section -->
+  <div class="image-section">
+    <img src="pitso.jpeg" alt="Construction Summit" class="image-section-img">
+  </div>
+
+  <!-- Packages Section with Image Background -->
+  <div class="packages">
+    <h2>Available Packages</h2>
+    <div class="package-options">
+      <div class="package">
+        <img src="bronze.jpeg" alt="Bronze Package" class="package-image" onclick="openModal('bronze.jpg')">
+        <p>Bronze</p>
+      </div>
+      <div class="package">
+        <img src="silver.jpeg" alt="Silver Package" class="package-image" onclick="openModal('silver.jpg')">
+        <p>Silver</p>
+      </div>
+      <div class="package">
+        <img src="gold.jpeg" alt="Gold Package" class="package-image" onclick="openModal('gold.jpg')">
+        <p>Gold</p>
+      </div>
+      <div class="package">
+        <img src="platinum.jpeg" alt="Platinum Package" class="package-image" onclick="openModal('platinum.jpg')">
+        <p>Platinum</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for image display -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption"></div>
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      var modal = document.getElementById("imageModal");
+      var modalImage = document.getElementById("modalImage");
+      var captionText = document.getElementById("modalCaption");
+      
+      modal.style.display = "block";
+      modalImage.src = imageSrc;
+      captionText.innerHTML = imageSrc.split('/').pop();
+    }
+
+    function closeModal() {
+      var modal = document.getElementById("imageModal");
+      modal.style.display = "none";
+    }
+  </script>
+</body>
+</html>
