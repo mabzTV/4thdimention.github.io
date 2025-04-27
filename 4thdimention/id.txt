@@ -1,0 +1,4 @@
+Countdown is set to June 30, 2025 (edit in script.js)
+
+All styling is handled offline — no external libraries used
+
