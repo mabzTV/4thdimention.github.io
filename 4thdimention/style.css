@@ -154,6 +154,18 @@
   .card-right {
     animation-name: slideInRight;
   }
+
+  .card {
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  }
+  
   
   @keyframes slideInLeft {
     0% { transform: translateX(-200px); opacity: 0; }
